@@ -9,8 +9,8 @@ def load_library(file_path)
     get_emoticon: {}
   }
   get_emoticon = 
-    emoticons.each do |key, value|
-    
+    emoticons.each do |key, value| #emoji, [E, J] 
+      emoticons_hash[:get_emoticon][value[1]][]
     binding.pry
   end
   emoticons_hash
