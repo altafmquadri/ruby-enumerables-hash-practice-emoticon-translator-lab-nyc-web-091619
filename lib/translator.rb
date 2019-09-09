@@ -8,9 +8,9 @@ def load_library(emoticons)
     get_emoticon: {}
   }
   get_emoticon = 
-    emoticons_hash.each do |emoticon|
+    emoticons.each do |emoticon|
     
-    binding.pry
+    #binding.pry
   end
 end
 
