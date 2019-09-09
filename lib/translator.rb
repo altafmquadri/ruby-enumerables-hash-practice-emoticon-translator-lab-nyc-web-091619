@@ -12,7 +12,7 @@ def load_library(file_path)
     emoticons.each do |emoji_name, value| #emoji, [E, J] 
       emoticons_hash[:get_meaning][value[1]] = emoji_name
       
-      binding.pry
+      #binding.pry
   end
   emoticons_hash
 end
