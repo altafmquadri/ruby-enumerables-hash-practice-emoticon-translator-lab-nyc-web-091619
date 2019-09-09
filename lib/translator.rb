@@ -11,7 +11,7 @@ def load_library(file_path)
   get_emoticon = 
     emoticons.each do |emoticon|
     
-    #binding.pry
+    binding.pry
   end
   emoticons_hash
 end
