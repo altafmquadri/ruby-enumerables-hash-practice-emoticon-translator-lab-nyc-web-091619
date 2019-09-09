@@ -9,15 +9,15 @@ def load_library(file_path)
     get_emoticon: {}
   }
  
-    emoticons.each do |emoji_name, value| #emoji, [E, J] 
-      emoticons_hash[:get_meaning][value[1]] = emoji_name
-      emoticons_hash[:get_emoticon][value[0]] = value[1]
-      #binding.pry
+  emoticons.each do |emoji_name, value| #emoji, [E, J] 
+    emoticons_hash[:get_meaning][value[1]] = emoji_name
+    emoticons_hash[:get_emoticon][value[0]] = value[1]
+    #binding.pry
   end
   emoticons_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, emoticon)
   # code goes here
 end
 
