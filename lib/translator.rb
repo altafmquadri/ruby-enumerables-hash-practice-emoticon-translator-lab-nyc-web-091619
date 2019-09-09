@@ -19,7 +19,7 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   emoticons_hash = load_library(file_path)
-  emoticons_hash[:get_emoticon][emoticon] ? emoticons_hash[:get_emoticon][emoticon] : (sorry_message = "not found")
+  emoticons_hash[:get_emoticon][emoticon] ? emoticons_hash[:get_emoticon][emoticon] : "Sorry, that emoticon was not found"
   #binding.pry
 end
 
