@@ -1,23 +1,30 @@
 require 'yaml'
 require 'pry'
-emoticons = YAML.load_file("./lib/emoticons.yml")
 
-def load_library(emoticons)
+
+def load_library(file_path)
+  emoticons = YAML.load_file(file_path)
   emoticons_hash = {
     get_meaning: {},
     get_emoticon: {}
   }
-  get_emoticon = 
-    emoticons_hash.each do |emoticon|
-    
-    binding.pry
+ 
+  emoticons.each do |emoji_name, value| #emoji, [E, J] 
+    emoticons_hash[:get_meaning][value[1]] = emoji_name
+    emoticons_hash[:get_emoticon][value[0]] = value[1]
+    #binding.pry
   end
+  emoticons_hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path, emoticon)
+  emoticons_hash = load_library(file_path)
+  emoticons_hash[:get_emoticon][emoticon] ? emoticons_hash[:get_emoticon][emoticon] : "Sorry, that emoticon was not found"
+  #binding.pry
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, emoticon)
+  emoticons_hash = load_library(file_path)
+  emoticons_hash[:get_meaning][emoticon] ? emoticons_hash[:get_meaning][emoticon] : "Sorry, that emoticon was not found"
+  #binding.pry
 end
