@@ -19,6 +19,7 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   emoticons_hash = load_library(file_path)
+  emoticons_hash[:get_emoticon][emoticon]
   binding.pry
 end
 
