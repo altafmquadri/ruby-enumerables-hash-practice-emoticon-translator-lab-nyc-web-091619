@@ -10,7 +10,7 @@ def load_library(file_path)
   }
  
     emoticons.each do |key, value| #emoji, [E, J] 
-      emoticons_hash[:get_meaning] = [value[1]]
+      emoticons_hash[:get_meaning][value[1]] = key
       
       binding.pry
   end
